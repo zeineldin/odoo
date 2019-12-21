@@ -8,8 +8,8 @@ services:
       - db
     volumes:
       - ./odoo_data:/var/lib/odoo:rw,z
-      - ${ODOO_ADDONS}:/mnt/extra-addons:ro,z
-      - ${ODOO_CONF}:/etc/odoo:ro,z
+      - ${ODOO_ADDONS}:/mnt/extra-addons:ro
+      - ${ODOO_CONF}:/etc/odoo:ro
     ports:
       - "${ODOO_PORT}"
 
@@ -22,5 +22,5 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - PGDATA=${PGDATA}
     volumes:
-      - ./odoo-db-data:/var/lib/postgresql/data/pgdata:rw,Z
+      - ./odoo-db-data:/var/lib/postgresql/data/pgdata:rw
 
