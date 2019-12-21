@@ -1,0 +1,6 @@
+<odoo>
+    <!-- Disallow the created user to be a customer -->
+      <record id="base.action_res_users" model="ir.actions.act_window">
+          <field name="context">{'search_default_no_share': 1, 'default_customer': 0}</field>
+      </record>
+</odoo>

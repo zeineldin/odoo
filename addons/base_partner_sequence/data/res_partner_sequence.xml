@@ -1,0 +1,7 @@
+<odoo>
+      <record id="sequence_res_partner" model="ir.sequence">
+            <field name="name">Partner Sequence</field>
+            <field name="code">res.partner</field>
+            <field name="padding">4</field>
+      </record>
+</odoo>
