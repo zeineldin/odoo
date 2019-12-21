@@ -8,10 +8,10 @@ services:
       - db
     volumes:
       - odoo_data:/var/lib/odoo:rw,z
-      - ${ODOO_ADDONS:-./addons}:/mnt/extra-addons:ro,z
-      - ${ODOO_CONF:-./config}:/etc/odoo:ro,z
+      - ${ODOO_ADDONS}:/mnt/extra-addons:ro,z
+      - ${ODOO_CONF}:/etc/odoo:ro,z
     ports:
-      - "${ODOO_PORT:-8069}"
+      - "${ODOO_PORT}"
 
   db:
     image: postgres:10
