@@ -11,7 +11,7 @@ services:
       - ${ODOO_CONF}:/etc/odoo:ro
     ports:
       - "${ODOO_PORT}"
-
+### this is test
   db:
     image: postgres:10
     restart: always
